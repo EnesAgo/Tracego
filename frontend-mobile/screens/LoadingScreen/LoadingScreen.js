@@ -10,7 +10,7 @@ const wait = (timeout) => {
 export default function Logout(props) {
 
     const NavigateToApp = React.useCallback(() => {
-        wait(2000).then(() => props.navigation.navigate("SignIn"));
+        wait(1500).then(() => props.navigation.navigate("Main"));
       }, []);
 
 
@@ -19,7 +19,7 @@ export default function Logout(props) {
   return (
     
     <SafeAreaView style={styles.container}>
-      <Text>Harsal</Text>
+      <Text>TRACEGO</Text>
     </SafeAreaView>
   )
 }

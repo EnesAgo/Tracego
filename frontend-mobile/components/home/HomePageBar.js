@@ -2,7 +2,6 @@
 import { View, Text, StyleSheet, ImageBackground,Image, Pressable } from 'react-native';
 import React, { useState } from 'react';
 import LikeButtonBar from '../likebutton/LikeButtonBar';
-import LocationButton from '../locationbutton/LocationButton';
 import StatusWrapper from '../StoryWrapper/StoryWrapper';
 
 

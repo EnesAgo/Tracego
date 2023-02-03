@@ -23,7 +23,7 @@ function Header({props}) {
       return (
         <View style={styles.header} >
 
-<View style={[styles.aiChallenge , !openView && styles.aiChallengeOpen, ]} >
+{/* <View style={[styles.aiChallenge , !openView && styles.aiChallengeOpen, ]} >
             <Pressable onPress={() => setOpenView(true)}>
                  <View style={styles.menuContainer}>
                      <Text style={styles.headerText}>Menu</Text>
@@ -58,7 +58,7 @@ function Header({props}) {
                  </View>
             </Pressable>
         </View>
-            
+             */}
 
             <Text style={styles.Logo}>Logo</Text>
             <Ionicons  onPress={() => setOpenView(true)} name="menu-sharp" size={24} color="white" />

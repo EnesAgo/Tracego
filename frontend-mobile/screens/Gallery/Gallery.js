@@ -13,13 +13,13 @@ const wait = (timeout) => {
   return new Promise(resolve => setTimeout(resolve, timeout));
 }
 
-function HomePage (props) {
+function Gallery (props) {
 
  
     return (
       <View style={styles.container}>
 
-        <Text>Hello</Text>
+        <Text>Gallery</Text>
 
        </View>
 
@@ -28,6 +28,6 @@ function HomePage (props) {
 
 
 
-export default HomePage
+export default Gallery
 
 

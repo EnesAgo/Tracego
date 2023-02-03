@@ -11,46 +11,14 @@ const wait = (timeout) => {
 }
 
 export default function SearchBarNative({props}) {
-    const [isSearch, setIsSearch] = useState(true)
-    const [text,setText] = useState('');
-    const [suggestions, setSuggestions] = useState([]);
-    const [profileData, setProfileData] = useState()
-    const [refreshing, setRefreshing] = React.useState(false);
 
-    const [suggestionUserUUID, setSuggestionUserUUID] = useState('');
+  const [text, setText] = useState('')
+  const [suggestions, setSuggestions] = useState(false)
 
-    useEffect(() => console.log(`
-    
-    uuID: ${suggestionUserUUID}
-    
-    `), [suggestionUserUUID])
+  function getSuggestions(text) {
+    console.log(text)
+  }
 
-    const onRefresh = React.useCallback(() => {
-      setRefreshing(true);
-      wait(2000).then(() => Updates.reloadAsync());
-    }, []);
-
-      async function getSuggestions(query){
-            const response = await api.get(`/search?text=${query}`)
-         
-            setSuggestions(response)
-        }
-
-      async function getProfileData(uuID) {      
-        const response = await api.get(`/getProfile?uuID=${uuID}`)
-        setProfileData(response)
-
-        if(response.error){
-          // console.log(response.error)
-          return
-        }
-        // console.log(response)
-
-
-      }
-
-      if(isSearch){
-        
   return (
 
     <>
@@ -70,57 +38,17 @@ export default function SearchBarNative({props}) {
         {suggestions && suggestions.map ((suggestions,i) =>
         <View key={i} style={styles.suggestionsContainer}>
             <View style={styles.searchSuggestions}>
-            <Pressable key={i} style={styles.leftRightContainer} 
-              onPress={()=>{
-                setIsSearch(false);
-                getProfileData(suggestions.uuID)
-                setSuggestionUserUUID(suggestions.uuID)
-              }}
-            >
+              <Pressable key={i} style={styles.leftRightContainer} >
                 <Text style={styles.usernameText}>{suggestions.username}</Text>
-                </Pressable>
-                </View>
+              </Pressable>
+            </View>
         </View>
         )}
     
          
         </>
       )
-      }else {
 
-             return (
-              
-               
-              <View style={styles.container}>
-                <ScrollView
-                 contentContainerStyle={styles.scrollView}
-                 refreshControl={
-                   <RefreshControl
-                     refreshing={refreshing}
-                     onRefresh={onRefresh}
-                   />
-                 }
-               >
-
-                <AntDesign style={styles.backButton} name="arrowleft" size={30} color="white" onPress={() => setIsSearch(true)} />
-
-                  
-         
-                 <View>
-         
-                     {
-                       profileData ? <ProfileBar props={props} logo={profileData.UserImage}  profilename={profileData.username} UserUUID={suggestionUserUUID}  postLat={profileData.lat} 
-                       postLon={profileData.lon}/> : <Text>Loading...</Text> 
-                       
-                     }     
-
-                 </View>
-                 </ScrollView>
-               </View>
-           
-               
-             )
-         }
       
 
 
