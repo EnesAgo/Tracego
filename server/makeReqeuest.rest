@@ -1,0 +1,84 @@
+POST http://localhost:3001/createuser
+Content-Type: application/json
+
+{
+    "username": "fotroxic",
+    "email": "onurago@gmail.com",
+    "password": "password",
+   "confirmPassword": "password",
+    
+    
+}
+
+###
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "username": "fotroxic",
+    "password": "password"
+}
+
+
+###
+GET http://localhost:3001/getAllUsers
+
+###
+GET http://localhost:3001/search?text=a
+
+###
+GET http://localhost:3001/getProfile?uuID=172d991b-e96a-46bc-b298-192692698846
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dUlEIjoiODQ0YjYxZTQtMjdkYy00N2I2LTgyN2EtZmQzZTQ3MWY0Y2RlIiwiaWF0IjoxNjY4NDUwNzAzfQ.PTgkbS40sC14s903kMN2QMggGKmipK48qzSSy-Z6Hpw
+
+###
+Put http://localhost:3001/changeUserImage?uuID=4d28bc37-d1df-46cd-bc49-088b16dd72e5
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dUlEIjoiODQ0YjYxZTQtMjdkYy00N2I2LTgyN2EtZmQzZTQ3MWY0Y2RlIiwiaWF0IjoxNjY4NDUwNzAzfQ.PTgkbS40sC14s903kMN2QMggGKmipK48qzSSy-Z6Hpw
+
+{
+    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.OF59vsDmwxPP1tw7b_8clQHaE8%26pid%3DApi%26h%3D160&f=1&ipt=b8220c7b8405336d20ab23fa9060377acba9dbf34b6ce208331fcdbc4e7b7bdf&ipo=images"
+}
+
+###
+PUT http://localhost:3001/changePassword?uuID=4e8c01c0-94ab-4f01-a53d-148ffa6f99a2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dUlEIjoiODQ0YjYxZTQtMjdkYy00N2I2LTgyN2EtZmQzZTQ3MWY0Y2RlIiwiaWF0IjoxNjY4NDUwNzAzfQ.PTgkbS40sC14s903kMN2QMggGKmipK48qzSSy-Z6Hpw
+
+{
+    "oldPassword": "passworddd", 
+    "newPassword": "12345678"
+}
+###
+
+POST http://localhost:3001/createUser/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dUlEIjoiODQ0YjYxZTQtMjdkYy00N2I2LTgyN2EtZmQzZTQ3MWY0Y2RlIiwiaWF0IjoxNjY4NDUwNzAzfQ.PTgkbS40sC14s903kMN2QMggGKmipK48qzSSy-Z6Hpw
+
+
+{
+    "userSentUUID": "nothing",
+    "userSentUsername": "username",
+    "Title": "title",
+    "PostImage": "title",
+     "lat": "yes",
+         "lon": "yes",
+}
+
+###
+
+POST http://localhost:3001/createBadge/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dUlEIjoiODQ0YjYxZTQtMjdkYy00N2I2LTgyN2EtZmQzZTQ3MWY0Y2RlIiwiaWF0IjoxNjY4NDUwNzAzfQ.PTgkbS40sC14s903kMN2QMggGKmipK48qzSSy-Z6Hpw
+
+{
+    "userUUID": "usadsda",
+    "Badge": "badge"
+}
+
+
+###
+GET http://localhost:3001/getBadges?userUUID=usadsda&Badge=badge
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dUlEIjoiODQ0YjYxZTQtMjdkYy00N2I2LTgyN2EtZmQzZTQ3MWY0Y2RlIiwiaWF0IjoxNjY4NDUwNzAzfQ.PTgkbS40sC14s903kMN2QMggGKmipK48qzSSy-Z6Hpw
