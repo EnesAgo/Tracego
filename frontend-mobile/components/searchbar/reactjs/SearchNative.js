@@ -2,8 +2,6 @@ import api from '../../../api/api'
 import React, { useEffect, useState } from 'react'
 import {View, Text, TextInput, Pressable,StyleSheet, ScrollView, RefreshControl, ImageBackground} from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
-import notificationsBackground from '../../../pictures/Notifications.png';
-import ProfileBar from '../../profile/ProfileBar';
 import * as Updates from 'expo-updates';
 
 const wait = (timeout) => {

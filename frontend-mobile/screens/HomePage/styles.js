@@ -1,78 +1,58 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
-  scrollView:{
-  
-    flexDirection: 'row',
-    flexWrap: "wrap",
-    backgroundColor: '#00000000',
-    borderRadius: 50,
-    width: "100%",
-    alignItems: 'center',
-  
-  },
-
-  scrollViewHorizontal:{
-    flexDirection: 'row',
-   
-   },
-
-  mainContainer:{
-      backgroundColor: '#00000000',
-      alignItems: 'center',
-
-  },
-
-  barContainer:{
-    width: "25%",
-    alignItems: 'center',
-    textAlign: 'center',
-
-  },
-
-  barContainerHorizontal:{
-    marginRight: 10,
-  },
-
-
-
+ 
   container:{
-    marginTop: 20,
-    width: "100%",
+    flex:1,
+    height: "100%",
+    width: windowWidth,
     alignItems: 'center',
     textAlign: 'center',
 },
 
+bg:{
+  // flex: 1,
+  height: 500,
+  width: windowWidth,
+  alignItems: "center",
+  // justifyContent: "center",
+  backgroundColor: "black",
+  justifyContent: "center"
 
-p: {
-    color: "black",
-  
-   
-},
-image: {  
-   width : 70,
-  height: 70,
-    backgroundColor: '#00000000',
-    flexDirection:'row',
-    borderRadius: 50,
-    borderColor: '#1678ca',
-    borderWidth: 3,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    
-  },
-  logo:{
-    width:30,
-    height:30,
-    marginBottom:5,
-    borderRadius: 15,
-    backgroundColor: '#00000000',
 },
 
+welcomeText: {
+  color: "#fff",
+  fontSize: 30,
+  fontWeight: 'bold',
+},
+welcomeTextSmall:{
+  color: "#fff",
+  fontSize: 15,
+  fontWeight: 'bold',
+},
+welcomeView:{
+  marginRight: 40
+},
 
-commentButton:{
-    alignSelf: 'center',
-    width: 50,
+about:{
+  margin: 15
+},
+aboutHeader: {
+  marginTop: 5,
+  marginBottom: 15
+},
+aboutHeaderText: {
+  color: "#11414B",
+  fontSize: 24,
+  fontWeight: "bold"
+},
+aboutParagraphText: {
+  color: "#918B8B",
+  fontSize: 16,
+  fontWeight: "600"
 }
 
 

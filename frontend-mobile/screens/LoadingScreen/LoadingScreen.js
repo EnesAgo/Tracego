@@ -1,7 +1,5 @@
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
 import React, { useEffect } from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as Updates from 'expo-updates';
 
 const wait = (timeout) => {
     return new Promise(resolve => setTimeout(resolve, timeout));

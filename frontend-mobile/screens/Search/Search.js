@@ -9,7 +9,7 @@ function Search(props){
 
   
     return (
-      <View style={styles.container }>
+      <View style={styles.container}>
         <ImageBackground source={notificationsBackground} resizeMode="cover" style={styles.image} imageStyle={{opacity:0.3}} >
           <SearchBarNative props={props} />
         </ImageBackground>

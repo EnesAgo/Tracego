@@ -5,10 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomePage from './screens/HomePage/HomePage';
 import Search from './screens/Search/Search';
 import tabBarIconFunc from './components/tabbar/tabbar';
-import Profile from './screens/Profile/Profile';
 import Map from './screens/Map/Map';
-import TakePicture from './screens/Post/TakePicture';
-import FullPost from './screens/FullPost/FullPost';
 import LoadingScreen from './screens/LoadingScreen/LoadingScreen';
 import GpsDeneme from './GpsDeneme'
 import About from './screens/About/About';
@@ -49,11 +46,11 @@ const MainScreen = () =>{
 
       <Bottom.Screen name='Search' component={Search} />
 
-      <Bottom.Screen name='About' component={About} />
+      {/* <Bottom.Screen name='About' component={About} /> */}
   
       <Bottom.Screen name="Map" component={Map} initialParams={{postLat: "0", postLon: "0" }} />
 
-      <Bottom.Screen name="Gallery" component={Gallery} />
+      {/* <Bottom.Screen name="Gallery" component={Gallery} /> */}
     
     
     </Bottom.Navigator>
