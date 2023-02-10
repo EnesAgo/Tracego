@@ -45,12 +45,8 @@ const MainScreen = () =>{
       <Bottom.Screen name="HomePage" component={HomePage} />
 
       <Bottom.Screen name='Search' component={Search} />
-
-      {/* <Bottom.Screen name='About' component={About} /> */}
   
       <Bottom.Screen name="Map" component={Map} initialParams={{postLat: "0", postLon: "0" }} />
-
-      {/* <Bottom.Screen name="Gallery" component={Gallery} /> */}
     
     
     </Bottom.Navigator>

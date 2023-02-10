@@ -13,11 +13,9 @@ const styles = StyleSheet.create({
 },
 
 bg:{
-  // flex: 1,
   height: 500,
   width: windowWidth,
   alignItems: "center",
-  // justifyContent: "center",
   backgroundColor: "black",
   justifyContent: "center"
 
@@ -38,7 +36,7 @@ welcomeView:{
 },
 
 about:{
-  margin: 15
+  margin: 15,
 },
 aboutHeader: {
   marginTop: 5,
@@ -53,7 +51,50 @@ aboutParagraphText: {
   color: "#918B8B",
   fontSize: 16,
   fontWeight: "600"
-}
+},
+
+reservePLanButton:{
+  width: 175,
+  height: 75,
+  marginVertical: 20,
+  backgroundColor: "rgb(33, 45, 65)",
+  textAlign: "center",
+  alignItems: "center",
+  justifyContent: "center"
+},
+reservePLanButtonText: {
+  color: "#fff",
+  fontSize: 18,
+  fontWeight: "600",
+  textAlign: "center",
+  height: 75,
+  lineHeight: 75,
+},
+
+aboutPicHolder: {
+  width: "100%",
+  alignItems: "center",
+  marginVertical: 40
+},
+aboutPic: {
+  width: windowWidth-100,
+  height: 400,
+  alignItems: "center",
+  backgroundColor: "black",
+  justifyContent: "center"
+},
+
+
+
+choosePlace: {
+  width: "100%",
+  alignItems: "center"
+},
+placeText: {
+  color: "#11414B",
+  fontSize: 28,
+  fontWeight: "bold"
+},
 
 
   }

@@ -4,17 +4,84 @@ import {View, Text, TextInput, Pressable,StyleSheet, ScrollView, RefreshControl,
 import { AntDesign } from '@expo/vector-icons';
 import * as Updates from 'expo-updates';
 
-const wait = (timeout) => {
-  return new Promise(resolve => setTimeout(resolve, timeout));
-}
 
 export default function SearchBarNative({props}) {
 
   const [text, setText] = useState('')
   const [suggestions, setSuggestions] = useState(false)
 
+  function searchStringInArray (str, strArray) {
+    let returnArr = [];
+    strArray.forEach(e => {
+      // console.log(String(e.placeName).toLowerCase().match(str))
+      var contained = (String(e.placeName).toLowerCase().indexOf(str.toLowerCase()) != -1);
+      if(contained){
+        returnArr.push(e)
+      }
+    })
+
+    return returnArr;
+  }
+
+  const places = [
+    {
+        placeName: "Istanbul",
+        picture: require("./images/place1.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Antalya",
+        picture: require("./images/place2.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Izmir",
+        picture: require("./images/place3.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Trabzon",
+        picture: require("./images/place4.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Çanakkale",
+        picture: require("./images/place5.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Bodrum",
+        picture: require("./images/place6.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Yalova",
+        picture: require("./images/place7.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Kapadokya",
+        picture: require("./images/place8.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+    {
+        placeName: "Mersin",
+        picture: require("./images/place9.png"),
+        price: "€75",
+        stars: "5,2"
+    },
+  ]
+
   function getSuggestions(text) {
-    console.log(text)
+    setSuggestions(searchStringInArray(text, places))
   }
 
   return (
@@ -37,7 +104,7 @@ export default function SearchBarNative({props}) {
         <View key={i} style={styles.suggestionsContainer}>
             <View style={styles.searchSuggestions}>
               <Pressable key={i} style={styles.leftRightContainer} >
-                <Text style={styles.usernameText}>{suggestions.username}</Text>
+                <Text style={styles.usernameText}>{suggestions.placeName}</Text>
               </Pressable>
             </View>
         </View>
@@ -74,6 +141,7 @@ export default function SearchBarNative({props}) {
     
       suggestionsContainer:{
         top: 0,
+        marginTop: 15,
         marginBottom: 15,
           width:"100%",
       },
