@@ -21,7 +21,7 @@ function Card({img, rating, title, subtitle, price, route}) {
 
                     <button className="button button--flex place__button">
                         <a href={`${route}`}>
-                            <img src="http://localhost:3000/assets/img/rightArrow.png" width="25px" height="25px" />
+                            <img src="http://localhost:3000/assets/img/rightArrow3.png" width="15px" height="25px" />
                         </a>
                     </button> 
             </div>

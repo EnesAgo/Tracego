@@ -33,9 +33,9 @@ function Header({arr, third}) {
               <i className="ri-close-line nav__close" id="nav-close"></i>
           </div>
 
-          <div className="nav__toggle" id="nav-toggle">
+          {/* <div className="nav__toggle" id="nav-toggle">
               <i className="ri-function-line"></i>
-          </div>
+          </div> */}
       </nav>
   </header>
     )
