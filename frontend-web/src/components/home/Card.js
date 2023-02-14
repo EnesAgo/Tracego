@@ -1,5 +1,6 @@
 import React from 'react'
-import '../styles/style.css'
+import { Link } from 'react-router-dom'
+import '../../styles/style.css'
 
 function Card({img, rating, title, subtitle, price, route}) {
       return (
@@ -20,9 +21,9 @@ function Card({img, rating, title, subtitle, price, route}) {
                     </div>
 
                     <button className="button button--flex place__button">
-                        <a href={`${route}`}>
+                        <Link to={`/city/${route}`}>
                             <img src="http://localhost:3000/assets/img/rightArrow3.png" width="15px" height="25px" />
-                        </a>
+                        </Link>
                     </button> 
             </div>
 

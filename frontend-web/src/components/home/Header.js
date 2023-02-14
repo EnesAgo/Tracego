@@ -1,11 +1,25 @@
-import React from "react";
-import '../styles/style.css'
+import React, { useState, useEffect } from "react";
+import '../../styles/style.css'
 
 
-function Header({arr, third}) {
+function Header() {
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+  
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
     return (
-      <header className="header" id="header">
+      <header className={`header ${scrollPosition>100 && "scroll-header"}`} id="header">
       <nav className="nav container">
           <h1 href="#" className="nav__logo">Tracego</h1>
 

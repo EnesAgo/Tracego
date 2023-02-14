@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/style.css'
+import '../../assets/css/city.css'
 
-function Footer() {
+function CityFooter() {
       return (
         <footer className="footer section">
             <div className="footer__container container grid">
@@ -86,4 +86,4 @@ function Footer() {
   }
 
 
-export default Footer;
+export default CityFooter;

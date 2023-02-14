@@ -749,6 +749,23 @@ input {
   color: var(--white-color);
   font-size: 1.2rem;
 }
+.swiper-slide {
+  transition: 0.3s;
+
+}
+.swiper-slide-next{
+  transform: scale(1.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+
+}
+/* 
+.discover__title{
+  font-size: 24px !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+} */
 
 /* Show scroll */
 .show-scroll {

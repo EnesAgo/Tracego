@@ -1,11 +1,11 @@
 import React from 'react'
 import '../../styles/style.css'
-import Card from '../Card';
+import Card from '../home/Card'
 
 function SectionSix() {
     const places = [
         {
-            placeName: "İstanbul",
+            placeName: "Istanbul",
             img: "place1.png",
             price: "€75",
             stars: "5,2"
@@ -69,7 +69,7 @@ function SectionSix() {
 
             {
                 places && places.map(e => (
-                    <Card img={e.img} rating={e.stars} title={e.placeName} subtitle={"Turkey"} price={e.price} route={"#"} />
+                    <Card img={e.img} rating={e.stars} title={e.placeName} subtitle={"Turkey"} price={e.price} route={e.placeName.toLocaleLowerCase()} />
                 ))
             }
 

@@ -276,6 +276,19 @@ textarea.input {
   opacity: 0.2;
 }
 
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+.topA {
+  max-width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  position: static; 
+  top:25px; 
+  left: 25px;
+}
+
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
