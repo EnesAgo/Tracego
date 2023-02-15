@@ -65,22 +65,22 @@ function Contact() {
                     <h3 className="contacttitle">Contact Form</h3>
                     <div className="contactinput-container">
                     <input type="text" name="name" className="contactinput" />
-                    <label for="">Name Surname</label>
+                    <label>Name Surname</label>
                     
                     </div>
                     <div className="contactinput-container">
                     <input type="email" name="email" className="contactinput" />
-                    <label for="">Email Adress</label>
+                    <label>Email Adress</label>
                     <span>Email Adress</span>
                     </div>
                     <div className="contactinput-container">
                     <input type="tel" name="phone" className="contactinput" />
-                    <label for="">Phone Number</label>
+                    <label>Phone Number</label>
                     <span>Phone Number</span>
                     </div>
                     <div className="contactinput-container textarea">
                     <textarea name="message" className="contactinput"></textarea>
-                    <label for=""></label>
+                    <label></label>
                     <span>Message</span>
                     </div>
                     <input type="submit" value="Send" className="contactbtn" />

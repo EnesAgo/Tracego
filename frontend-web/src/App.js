@@ -4,6 +4,7 @@ import './styles/style.css'
 import City from "./View/City";
 import Contact from "./View/Contact";
 import Home from "./View/Home"; 
+import Order from "./View/Order";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/city/:cityName" element={<City />} />
+        <Route exact path="/order/:cityName" element={<Order />} />
       </Routes>
     </>
   );

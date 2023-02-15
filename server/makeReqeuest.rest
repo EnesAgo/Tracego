@@ -2,12 +2,9 @@ POST http://localhost:3001/createuser
 Content-Type: application/json
 
 {
-    "username": "fotroxic",
-    "email": "onurago@gmail.com",
-    "password": "password",
-   "confirmPassword": "password",
-    
-    
+    "username": "hello",
+    "email": "hello",
+    "password": "hello"
 }
 
 ###
@@ -16,8 +13,8 @@ POST http://localhost:3001/login
 Content-Type: application/json
 
 {
-    "username": "fotroxic",
-    "password": "password"
+    "username": "hello",
+    "password": "hello"
 }
 
 

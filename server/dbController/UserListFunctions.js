@@ -41,15 +41,10 @@ async function createUser(data) {
 
         const hashedData = {
             username: data.username,
-            nickname: `@${data.username}`,
             email: data.email,
-            // phone: data.phone,
-            userLevel: 0,
             password: hashedPassword,
             isAdmin: data.isAdmin,
             uuID: uuIDString,
-            bio: '',
-            UserImage: data.UserImage
         }
 
       const user = await UserList.create(hashedData)
@@ -58,14 +53,9 @@ async function createUser(data) {
 
       const dataUser = {
         username: user.username,
-        nickname: user.nickname,
         email: user.email,
-        // phone: user.phone,
-        userLevel: user.userLevel,
         isAdmin: user.isAdmin,
         uuID: user.uuID,
-        UserImage: user.UserImage,
-        bio: user.bio,
         token: token
       }
       
@@ -97,14 +87,9 @@ async function loginUser(data) {
 
     const dataUser = {
       username: user.username,
-      nickname: user.nickname,
       isAdmin: user.isAdmin,
       email: user.email,
-      // phone: user.phone,
-      userLevel: user.userLevel,
-      UserImage: user.UserImage,
       uuID: user.uuID,
-      bio: user.bio,
       token: token
     }
 
@@ -143,68 +128,6 @@ async function getAllUsers() {
 }
 
 
-async function searchBar(text) {
-  const regex = new RegExp(`${text}`,"gi");
-  try{
-    const data = await UserList.findAll({
-      where: {
-        username: {
-          [Op.substring]: text
-        }
-      }
-    })
-  console.log(data)
-  return data
-
-  }catch(e){
-    console.log(`error: ${e}`)
-    return `erro: ${e}`
-  }
-
-
-}
-
-
-
-//user image
-
-async function changeUsaerImage(uuID, image, token) {
-  try{
-      UserList.update(
-          {UserImage: `${image}`},
-          {where: {uuID: uuID}}
-      )
-
-      const user = await UserList.findOne({where: {
-          uuID: uuID
-      }})
-
-      const dataUser = {
-        username: user.username,
-        nickname: user.nickname,
-        isAdmin: user.isAdmin,
-        email: user.email,
-        // phone: user.phone,
-        userLevel: user.userLevel,
-        UserImage: user.UserImage,
-        uuID: user.uuID,
-        bio: user.bio,
-        token: token
-      }
-
-
-  return dataUser;
-  }
-  catch(e){
-    console.log(`error: ${e}`)
-      return {error: e};
-  }
-
-}
-
-
-
-
 //change user password
 async function changeUserPassword(uuID, oldPass, newPass) {
   try{
@@ -232,55 +155,6 @@ async function changeUserPassword(uuID, oldPass, newPass) {
 }
 
 
-//change user level
-async function changeUserLevel(uuID, levels) {
-  try{
-    UserList.update(
-      {userLevel: parseInt(levels)},
-      {where: {uuID: uuID}}
-  )
-
-  return true;
-  }
-  catch(e){
-      return {error: e};
-  }
-
-}
-
-
-//change user bio
-async function changeUserBio(uuID, newBio, token) {
-  try{
-    UserList.update(
-      {bio: newBio},
-      {where: {uuID: uuID}}
-  )
-
-  const user = await UserList.findOne({where: {
-    uuID: uuID
-  }})
-
-  const dataUser = {
-    username: user.username,
-    nickname: user.nickname,
-    isAdmin: user.isAdmin,
-    email: user.email,
-    // phone: user.phone,
-    userLevel: user.userLevel,
-    UserImage: user.UserImage,
-    uuID: user.uuID,
-    bio: newBio,
-    token: token
-  }
-
-  return dataUser;
-  }
-  catch(e){
-      return {error: e};
-  }
-
-}
 
 
 
@@ -288,9 +162,5 @@ module.exports = {
   createUser: createUser,
   loginUser: loginUser,
   getAllUsers: getAllUsers,
-  searchBar: searchBar,
-  changeUsaerImage: changeUsaerImage,
   changeUserPassword: changeUserPassword,
-  changeUserLevel: changeUserLevel,
-  changeUserBio: changeUserBio
 };

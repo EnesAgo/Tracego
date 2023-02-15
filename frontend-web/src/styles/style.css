@@ -751,6 +751,8 @@ input {
 }
 .swiper-slide {
   transition: 0.3s;
+  position: relative !important;
+  top: 7px !important;
 
 }
 .swiper-slide-next{
@@ -758,14 +760,22 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   transition: 0.3s;
+  position: relative !important;
+  top: 0 !important;
 
 }
-/* 
+.swiper-slide-next .discover__data{
+  margin-bottom: 15px;
+  margin-left: 0 !important;
+  position: absolute !important;
+  left: 15px;
+}
+
 .discover__title{
   font-size: 24px !important;
   margin-left: 0 !important;
   padding-left: 0 !important;
-} */
+}
 
 /* Show scroll */
 .show-scroll {
