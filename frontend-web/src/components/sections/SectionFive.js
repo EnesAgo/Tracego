@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import '../../styles/style.css'
 
 function SectionFive() {
+
+    const videoRef = useRef()
+
       return (
         <section className="video section">
         <h2 className="section__title">Video Tour</h2>
@@ -13,11 +16,11 @@ function SectionFive() {
             </p>
 
             <div className="video__content">
-                <video id="video-file">
-                    <source src="http://localhost:3000/assets/video/turkey.mp4" type="video/mp4" />
+                <video id="video-file" ref={videoRef}>
+                    <source src="http://localhost:3000/turkey.mp4" controls type="video/mp4" />
                 </video>
 
-                <button className="button button--flex video__button" id="video-button">
+                <button className="button button--flex video__button" id="video-button" onClick={() => {videoRef.current.play()}}>
                     <i className="ri-play-line video__button-icon" id="video-icon"></i>
                 </button>
             </div>

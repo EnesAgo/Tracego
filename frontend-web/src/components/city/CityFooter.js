@@ -60,12 +60,12 @@ function CityFooter() {
                     <div className="footer__data">
                         <h3 className="footer__subtitle">Support</h3>
                         <ul>
-                            <li className="footer__item">
+                            {/* <li className="footer__item">
                                 <a href="" className="footer__link">FAQs</a>
                             </li>
                             <li className="footer__item">
                                 <a href="" className="footer__link">Support Center</a>
-                            </li>
+                            </li> */}
                             <li className="footer__item">
                                 <a href="contact.html" className="footer__link">Contact Us</a>
                             </li>

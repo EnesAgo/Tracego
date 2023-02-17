@@ -27,58 +27,58 @@ export default function SearchBarNative({props}) {
     {
         placeName: "Istanbul",
         picture: require("./images/place1.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€143",
+        stars: "4,6"
     },
     {
         placeName: "Antalya",
         picture: require("./images/place2.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€130",
+        stars: "5,0"
     },
     {
         placeName: "Izmir",
         picture: require("./images/place3.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€100",
+        stars: "4,7"
     },
     {
         placeName: "Trabzon",
         picture: require("./images/place4.png"),
         price: "€75",
-        stars: "5,2"
+        stars: "4,8"
     },
     {
         placeName: "Çanakkale",
         picture: require("./images/place5.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€93",
+        stars: "4,3"
     },
     {
         placeName: "Bodrum",
         picture: require("./images/place6.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€175",
+        stars: "5,0"
     },
     {
         placeName: "Yalova",
         picture: require("./images/place7.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€137",
+        stars: "4,3"
     },
     {
         placeName: "Kapadokya",
         picture: require("./images/place8.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€97",
+        stars: "5,0"
     },
     {
         placeName: "Mersin",
         picture: require("./images/place9.png"),
-        price: "€75",
-        stars: "5,2"
+        price: "€117",
+        stars: "4,5"
     },
-  ]
+]
 
   function getSuggestions(text) {
     setSuggestions(searchStringInArray(text, places))

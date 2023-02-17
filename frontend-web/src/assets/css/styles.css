@@ -205,11 +205,11 @@ input {
 }
 
 .nav__logo, .nav__toggle {
-  color: var(--white-color);
+  color: var(--white-color) !important;
 }
 
 .nav__logo {
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-semi-bold) !;
 }
 
 .nav__toggle {
@@ -273,7 +273,7 @@ input {
 
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
-  color: var(--title-color);
+  color: var(--title-color) !important;
 }
 
 /* Active link */

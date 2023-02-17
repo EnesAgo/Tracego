@@ -117,7 +117,7 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
@@ -126,7 +126,7 @@ body {
 h1, h2, h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  font-family: var(--title-font);
+  font-family: var(--title-font) !important;
 }
 
 ul {
@@ -146,8 +146,8 @@ video {
 button,
 input {
   border: none;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-family: var(--body-font) !important;
+  font-size: var(--normal-font-size) !important;
 }
 
 button {
@@ -205,11 +205,13 @@ input {
 }
 
 .nav__logo, .nav__toggle {
-  color: var(--white-color);
+  color: var(--white-color) !important;
 }
 
 .nav__logo {
-  font-weight: var(--font-semi-bold);
+  font-weight: var(500) !important;
+  font-size: 16px !important;
+
 }
 
 .nav__toggle {
@@ -273,7 +275,7 @@ input {
 
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
-  color: var(--title-color);
+  color: var(--title-color) !important;
 }
 
 /* Active link */
@@ -324,8 +326,8 @@ input {
 }
 
 .home__data-title {
-  font-size: var(--biggest-font-size);
-  font-weight: var(--font-medium);
+  font-size: var(--biggest-font-size) !important;
+  font-weight: var(--font-medium) !important;
   margin-bottom: var(--mb-2-5);
 }
 

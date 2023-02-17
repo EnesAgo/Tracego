@@ -40,6 +40,53 @@ sequelize
     },
   });
 
+  const Maillist = sequelize.define("mails", {
+    fullName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+    },
+    text: {
+      type: DataTypes.STRING,
+    },
+    uuID: {
+      type: DataTypes.STRING
+    },
+  });
+
+  const ReserveLists = sequelize.define("reserves", {
+    fullName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    checkin: {
+      type: DataTypes.STRING,
+    },
+    checkout: {
+      type: DataTypes.STRING,
+    },
+    rooms: {
+      type: DataTypes.STRING
+    },
+    adults: {
+      type: DataTypes.STRING
+    },
+    children: {
+      type: DataTypes.STRING
+    },
+  });
+
+
 
   sequelize
   .sync()
@@ -53,4 +100,6 @@ sequelize
 
   module.exports = {
     UserList: UserList,
+    Maillist: Maillist,
+    ReserveLists: ReserveLists
   }

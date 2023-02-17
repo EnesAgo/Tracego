@@ -7,56 +7,56 @@ function SectionSix() {
         {
             placeName: "Istanbul",
             img: "place1.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€143",
+            stars: "4,6"
         },
         {
             placeName: "Antalya",
             img: "place2.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€130",
+            stars: "5,0"
         },
         {
             placeName: "Izmir",
             img: "place3.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€100",
+            stars: "4,7"
         },
         {
             placeName: "Trabzon",
             img: "place4.png",
             price: "€75",
-            stars: "5,2"
+            stars: "4,8"
         },
         {
             placeName: "Çanakkale",
             img: "place5.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€93",
+            stars: "4,3"
         },
         {
             placeName: "Bodrum",
             img: "place6.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€175",
+            stars: "5,0"
         },
         {
             placeName: "Yalova",
             img: "place7.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€137",
+            stars: "4,3"
         },
         {
             placeName: "Kapadokya",
             img: "place8.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€97",
+            stars: "5,0"
         },
         {
             placeName: "Mersin",
             img: "place9.png",
-            price: "€75",
-            stars: "5,2"
+            price: "€117",
+            stars: "4,5"
         },
     ]
 

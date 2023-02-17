@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../../../assets/css/city.css'
 
 function CitySectionTwo({placeName, cityDesc}) {
@@ -13,7 +14,7 @@ function CitySectionTwo({placeName, cityDesc}) {
                     <p className="about__description">
                         {cityDesc}
                     </p>
-                    <a href="#room" className="button">Reserve a place</a>
+                    <Link to={`/order/${placeName}`} className="button">Reserve a place</Link>
                 </div>
 
                 <div className="about__img">

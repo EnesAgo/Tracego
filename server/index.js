@@ -6,9 +6,9 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
 const verify = require('./verify/verifyToken');
-const { UserList, StoryList, CommentList, BadgeList, FollowPlacesList, SponsorList } = require("./dbController/TableSchemaCrontroller");
+const { UserList, Maillist, ReserveLists } = require("./dbController/TableSchemaCrontroller");
 
-const { createUser, loginUser, getAllUsers, searchBar, changeUsaerImage, changeUserPassword, changeUserLevel, changeUserBio } = require("./dbController/UserListFunctions");
+const { createUser, loginUser, getAllUsers, changeUserPassword } = require("./dbController/UserListFunctions");
 
 
 const upload = multer({ dest: 'posts_images/' })
@@ -61,13 +61,61 @@ app.post("/login", async (req,res) => {
     res.header('authorization', loginToken).send(loginToken)
 })
 
+app.post("/createmail", async (req, res) => {
+    try{
+        const uuidString = uuidv4()
+
+        const mailData = {
+            fullName: req.body.fullName,
+            email: req.body.email,
+            phone: req.body.phone,
+            text: req.body.text,
+            uuID: uuidString,
+        }
+    
+        const mail = await Maillist.create(mailData)
+    
+    
+        res.json(mail)
+    }
+    catch(e) {
+        res.json({error: e})
+    }
+
+})
+
+app.post("/createreserve", async (req, res) => {
+    try{
+
+        const mailData = {
+            fullName: req.body.fullName,
+            email: req.body.email,
+            checkin: req.body.checkin,
+            checkout: req.body.checkout,
+            rooms: req.body.rooms,
+            adults: req.body.adults,
+            children: req.body.children
+        }
+    
+
+        const reserve = await ReserveLists.create(mailData)
+    
+    
+        res.json(reserve)
+    }
+    catch(e) {
+        res.json({error: e})
+    }
+
+})
+
 //------------------------
 //get requests
 app.get("/getAllUsers", async (req, res) => {
     res.json(await getAllUsers())
 })
 
-app.get("/getProfile", verify, async (req, res) => {
+app.get("/getProfile", async (req, res) => {
     try{
         const user = await UserList.findOne({where: {
             uuID: req.query.uuID
@@ -87,6 +135,16 @@ app.get("/getProfile", verify, async (req, res) => {
         console.log(`error: ${e}`)
         res.json({error: e})
 
+    }
+})
+
+app.get("/getAllMails", async (req, res) => {
+    try{
+        const allMails = await Maillist.findAll()
+        res.json(allMails)
+    }
+    catch(e){
+        res.json({error: e})
     }
 })
 
