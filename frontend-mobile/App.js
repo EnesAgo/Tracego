@@ -46,7 +46,7 @@ const MainScreen = () =>{
 
       <Bottom.Screen name='Search' component={Search} />
   
-      <Bottom.Screen name="Map" component={Map} initialParams={{postLat: "0", postLon: "0" }} />
+      <Bottom.Screen name="Map" component={Map} />
     
     
     </Bottom.Navigator>
