@@ -69,7 +69,7 @@ function SectionSix() {
 
             {
                 places && places.map(e => (
-                    <Card img={e.img} rating={e.stars} title={e.placeName} subtitle={"Turkey"} price={e.price} route={e.placeName.toLocaleLowerCase()} />
+                    <Card key={`${e.img}-${e.placeName}`} img={e.img} rating={e.stars} title={e.placeName} subtitle={"Turkey"} price={e.price} route={e.placeName.toLocaleLowerCase()} />
                 ))
             }
 

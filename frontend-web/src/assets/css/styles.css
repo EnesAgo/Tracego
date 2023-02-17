@@ -83,7 +83,7 @@ body.dark-theme {
 
 /*========== Button Dark/Light ==========*/
 .nav__dark {
-  display: flex;
+  display: none;
   align-items: center;
   column-gap: 2rem;
   position: absolute;
@@ -827,6 +827,7 @@ input {
   }
   .nav__dark {
     position: initial;
+    display: none;
   }
   .nav__menu {
     display: flex;
@@ -837,7 +838,10 @@ input {
     column-gap: 4rem;
   }
   .nav__toggle, .nav__close {
-    display: none;
+    display: none !important;
+  }
+  .nav__dark{
+    display: none !important;
   }
   .change-theme-name {
     display: none;
