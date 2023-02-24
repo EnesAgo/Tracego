@@ -1,6 +1,7 @@
 import React from 'react'
 import { View,Text,RefreshControl, Pressable, Image, ImageBackground, ScrollView, SafeAreaView } from 'react-native';
 import styles from './styles';
+import { Linking} from 'react-native'
 
 
 function PlacePlans () {
@@ -83,7 +84,9 @@ function PlacePlans () {
 
                                     <View style={{width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingRight: 15}}>
                                         <Text style={styles.price}>{e.price}</Text>
-                                        <Pressable style={styles.button}>
+                                        <Pressable style={styles.button} onPress={() => {
+                                            Linking.openURL(`http://192.168.196.204:3000/order/${e.placeName}`);
+                                        }}>
                                             <Text style={styles.rightArrow}>→</Text>
                                         </Pressable>
                                     </View>

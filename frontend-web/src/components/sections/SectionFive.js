@@ -16,8 +16,8 @@ function SectionFive() {
             </p>
 
             <div className="video__content">
-                <video id="video-file" ref={videoRef}>
-                    <source src="http://localhost:3000/turkey.mp4" controls type="video/mp4" />
+                <video id="video-file" ref={videoRef} controls>
+                    <source src="http://localhost:3000/turkey.mp4" type="video/mp4" />
                 </video>
 
                 <button className="button button--flex video__button" id="video-button" onClick={() => {videoRef.current.play()}}>
